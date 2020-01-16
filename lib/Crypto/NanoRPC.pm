@@ -13,7 +13,7 @@ our %EXPORT_TAGS = ( 'all' => [] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = ();
 
-our $VERSION = '0.8';
+our $VERSION = '0.8.2';
 
 my $rpc_actions = {
     # Node RPC's
@@ -443,7 +443,9 @@ These modules are required:
 
 =head1 AUTHOR
 
-Ruben de Groot, E<lt>ruben@hacktor.com<gt>
+Ruben de Groot, ruben at hacktor.com
+
+Git Repository: https://github.com/hacktor/Crypto-NanoRPC
 
 =head1 COPYRIGHT AND LICENSE
 

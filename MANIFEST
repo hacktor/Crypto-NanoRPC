@@ -1,6 +1,8 @@
 Changes
+INSTALL
+lib/Crypto/NanoRPC.pm
+LICENSE
 Makefile.PL
 MANIFEST
-README
+README.md
 t/Crypto-NanoRPC.t
-lib/Crypto/NanoRPC.pm
