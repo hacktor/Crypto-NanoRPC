@@ -6,7 +6,7 @@ jobs:
     name: buildhack
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
       - run: git checkout HEAD^
       - name: make the module distribution tarball
         run: |
@@ -14,3 +14,12 @@ jobs:
           make
           make manifest
           make dist
+  upload:
+    name: uploadhack
+    runs-on: ubuntu-latest
+    steps:
+      - name: upload tarball from build
+        uses: actions/upload-artifact@v1
+        with:
+          name: tarball
+          path: tarball/*.tar.gz
