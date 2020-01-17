@@ -1,0 +1,16 @@
+name: Build Workflow
+on: [push]
+
+jobs:
+  build:
+    name: buildhack
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: git checkout HEAD^
+      - name: make the module distribution tarball
+        run: |
+          perl Makefile.PL
+          make
+          make manifest
+          make dist
