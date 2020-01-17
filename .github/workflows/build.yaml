@@ -13,12 +13,12 @@ jobs:
           make
           make manifest
           make dist
-      - name: save tarball name
-        run: echo "Trying to find tarball name"
-        env:
-          TARB: $(ls *.tar.gz)
-      - name: upload tarball from build
-        uses: actions/upload-artifact@v1
-        with:
-          name: tarball
-          path: Crypto-NanoRPC-0.9.1.tar.gz
+#      - name: save tarball name
+#        run: echo "Trying to find tarball name"
+#        env:
+#          TARB: $(ls *.tar.gz)
+#      - name: upload tarball from build
+#        uses: actions/upload-artifact@v1
+#        with:
+#          name: tarball
+#          path: Crypto-NanoRPC-0.9.1.tar.gz
