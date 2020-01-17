@@ -13,12 +13,12 @@ jobs:
           make
           make manifest
           make dist
-  upload:
-    name: uploadhack
-    runs-on: ubuntu-latest
-    steps:
+      - name: save tarball name
+        run: echo "Trying to find tarball name"
+        env:
+          TARB: $(ls *.tar.gz)
       - name: upload tarball from build
         uses: actions/upload-artifact@v1
         with:
           name: tarball
-          path: tarball/*.tar.gz
+          path: $(ls *.tar.gz)
